@@ -35,7 +35,9 @@ app.get("/recipes", async (req, res) => {
         await session.close();
     }
 });
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
+});
 });
